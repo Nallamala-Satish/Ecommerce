@@ -13,7 +13,10 @@ app.use(cors());
 
 
 // Database connection with mongoDB
-mongoose.connect("mongodb+srv://satish:Satish123@cluster0.pdcj4.mongodb.net/e-commerce");
+mongoose.connect("mongodb+srv://satish:Satish123@cluster0.pdcj4.mongodb.net/e-commerce",{
+   useNewUrlParser: true,
+   useUnifiedTopology: true,
+ });
 
 app.get('/',(req,res)=>{
    res.send("Express App is runnings")
